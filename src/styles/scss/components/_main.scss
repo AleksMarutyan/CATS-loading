@@ -1,0 +1,9 @@
+@import "../variables";
+@import "../mixins";
+
+#main {
+  width: 93%;
+  min-height: 100vh;
+  background-color: $backSecond;
+  margin-left: 7%;
+}

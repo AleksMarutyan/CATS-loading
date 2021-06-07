@@ -1,0 +1,23 @@
+@import "../variables";
+@import "../mixins";
+
+#menu {
+  width: 7%;
+  min-height: 100vh;
+  background-color: $backMain;
+  color: $textMain;
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include flexContainer(column, center, stretch, no-wrap, 0);
+
+  ul {
+    width: 100%;
+  }
+  ul li {
+    width: 100%;
+    list-style: none;
+    border: 1px solid $textMain;
+    color: $textMain;
+  }
+}
