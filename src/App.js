@@ -1,19 +1,20 @@
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import "./styles/scss/app.scss";
-import Main from "./components/Main/main";
-import Menu from "./components/Menu/menu";
-import { getData } from "./redux/actions/works";
+import React,{ useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import './assets/styles/app.scss';
+import SideMenu from './components/SideMenu/SideMenu';
+import Main from './components/Main/Main';
+import { getCategories } from './redux/thunks/catsThunk'
+
 
 function App() {
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getData());
-  });
+  useEffect(()=>{
+    dispatch(getCategories())
+  })
   return (
-    <div className="App">
-      <Menu />
-      <Main />
+    <div className='app'>
+      <SideMenu/>
+      <Main/>
     </div>
   );
 }

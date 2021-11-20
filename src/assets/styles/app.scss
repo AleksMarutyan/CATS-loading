@@ -1,0 +1,17 @@
+@import "./variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.app{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  @media (max-width : 1200px){
+    flex-direction: column;
+  }
+}
