@@ -9,14 +9,16 @@ function SideMenu({ setFloorsCount, floorsCounst }) {
   };
 
   const onButtonClick = () => {
-    setFloorsCount(inputValue);
+    if (inputValue !== '') {
+      setFloorsCount(inputValue);
+    }
   };
   return (
     <div className={s.side_menu}>
       <div className={s.side_menu_input}>
         <p>Enter floors count</p>
         <input type='number' onChange={onInputChage} value={inputValue}></input>
-        <button onClick={onButtonClick}>Choose</button>
+        <button onClick={onButtonClick}>Submit</button>
       </div>
     </div>
   );
