@@ -1,20 +1,14 @@
-import React,{ useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import './assets/styles/app.scss';
+import React, { useState } from 'react';
+import Elevator from './components/Elevator/Elevator';
 import SideMenu from './components/SideMenu/SideMenu';
-import Main from './components/Main/Main';
-import { getCategories } from './redux/thunks/catsThunk'
-
+import './assets/styles/app.scss';
 
 function App() {
-  const dispatch = useDispatch();
-  useEffect(()=>{
-    dispatch(getCategories())
-  })
+  const [floorsCount, setFloorsCount] = useState(5);
   return (
     <div className='app'>
-      <SideMenu/>
-      <Main/>
+      <SideMenu setFloorsCount={setFloorsCount} floorsCount={floorsCount} />
+      <Elevator floorsCount={floorsCount} />
     </div>
   );
 }

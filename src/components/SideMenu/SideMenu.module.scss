@@ -2,56 +2,24 @@
 
 .side_menu{
    min-width: 15%;
-   min-height: 100vmax;
-   background-color: $strongGrey;
-    @media (max-width : 1200px){
-        min-width: 15%;
-        min-height: 5vmax;
-    }
+   height: inherit;
+   background-color: rgb(57, 56, 56);
 }
 
-.categories_dropdown {
-   
-    padding: 10px 25px 10px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    >p {
-        font-family: "Gill Sans", sans-serif;;
-        font-size: 20px;
-        font-weight: bold;
-        color : $red;
-    }
-    .dropdown_icon{
-        width: 18px;
-        height: 18px;
-        transform: rotate(180deg);   
-        &_rot{
-            width: 18px;
-            height: 18px;
-            transform: rotate(0deg);
-        }
-    }
-
+.side_menu_input{
+   display: flex;
+   flex-direction: column; 
+   align-items: center;
+   margin-top: 20px;
+   p{
+       font-size: 3vmin;
+       font-weight: bold;
+       color: rgb(209, 40, 40);
+   }
+   input{
+     margin-top: 20px;
+     width: 20vmin;
+     height: 3vmin;
+   }
 }
 
-.dropdown_list {
-    display: flex;
-    flex-direction: column;
-    padding: 0px 10px 10px 10px;
-    .list_element{
-        width: 100%;
-        height: 5vmin;
-        display: flex;
-        align-items: flex-end;
-        font-size: 23px;
-        margin-top: 5px;
-        border-bottom: 1px solid $red;
-        color: $grey;
-        text-decoration: none;
-         @media (max-width : 1200px){
-            width: 25%;
-        }
-    }
-}

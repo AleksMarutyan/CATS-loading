@@ -1,0 +1,67 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 85%;
+  background: no-repeat center/ 100% 100% url('../../assets/images/blackStone1.jpg');
+}
+
+.elevator_container{
+  background: no-repeat center center/ 100% 100% url('../../assets/images/liftBackground.jpg');
+  box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.6);
+}
+
+.floor_number{
+  padding-top: 20px;
+  padding-bottom: 20px ;
+  font-size: 25px;
+  font-family: 'tablo';
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  >p{
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
+    color: rgb(209, 40, 40);
+    text-align: center;   
+    background-color: rgb(41, 36, 36);
+    border: 2px solid black;
+    border-radius: 50px;
+
+  }
+  
+}
+
+.floors{
+  position: relative;
+}
+.elevator{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width:180px;
+    height: 135px;
+    background: no-repeat center center/ 100% 100% url('../../assets/images/elevIn.jpg');
+    border: 4px solid black;
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: bottom 1s linear 0s, gap 1s linear 1s;
+    //transition:  ;
+
+}
+
+.elev_door_container{
+  width: 90px;
+  height: inherit;
+  background-image: url('../../assets/images/leftDoor.jpg');
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+  background-position: center;
+}
